@@ -7,7 +7,7 @@ int main() {
   std::vector<int> numbers;
 
   std::string line;
-  std::ifstream myfile("../dat/day1.txt");
+  std::ifstream myfile("./dat/day1.txt");
 
   if (myfile.is_open()) {
     while (std::getline(myfile, line)) {
