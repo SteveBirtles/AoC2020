@@ -1,4 +1,8 @@
 #!/bin/bash
+OUT=./out
+if [ ! -d "$OUT" ]; then
+    mkdir $OUT
+fi
 echo "Compiling day $1..."
 if g++ -std=c++11 ./src/day$1.cpp -o ./out/day$1; then
 	echo "Compilation successful"
