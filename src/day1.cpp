@@ -24,6 +24,19 @@ int main() {
     std::cout << "Unable to open file";
   }
 
+  for (int i = 0; i < numbers.size() - 1; i++) {
+    std::cout << ".";
+    for (int j = i + 1; j < numbers.size(); j++) {
+      if (numbers[i] + numbers[j] == 2020) {
+        std::cout << std::endl
+                  << numbers[i] << " x " << numbers[j] << " = "
+                  << (numbers[i] * numbers[j]) << std::endl;
+        goto endloop1;
+      }
+    }
+  }
+endloop1:
+
   for (int i = 0; i < numbers.size() - 2; i++) {
     std::cout << ".";
     for (int j = i + 1; j < numbers.size() - 1; j++) {
@@ -33,12 +46,12 @@ int main() {
                     << numbers[i] << " x " << numbers[j] << " x " << numbers[k]
                     << " = " << (numbers[i] * numbers[j] * numbers[k])
                     << std::endl;
-          goto endloop;
+          goto endloop2;
         }
       }
     }
   }
-endloop:
+endloop2:
 
   std::cout << std::endl;
 }
